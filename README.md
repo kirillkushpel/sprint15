@@ -2,7 +2,6 @@
 ## Backend deployment
 
 Public IP: 84.201.138.101
-
 http://sprint15app.ml https://sprint15app.ml
 
 * все ошибки обрабатываются централизованно;
