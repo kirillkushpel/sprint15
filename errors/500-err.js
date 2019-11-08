@@ -5,4 +5,5 @@ class Error500 extends Error {
   }
 }
 
+
 module.exports = Error500;

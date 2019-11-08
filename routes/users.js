@@ -12,4 +12,5 @@ users.get('/:id', celebrate({
   }),
 }), getSingleUser);
 
+
 module.exports = users;

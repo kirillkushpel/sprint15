@@ -16,6 +16,7 @@ module.exports.getAllCards = (req, res, next) => {
     .catch(() => next(new Error500('Ошибка при чтении всех карточек')));
 };
 
+
 module.exports.deleteCard = (req, res, next) => {
   Card.findById(req.params.id)
     // eslint-disable-next-line consistent-return
