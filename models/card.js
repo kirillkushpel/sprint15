@@ -10,7 +10,7 @@ const cardSchema = new mongoose.Schema({
   link: {
     type: String,
     validate: {
-      validator: (v) => v.match(/^https?:\/\/(www\.)?[\w./-]{1,}/),
+      validator: (v) => validate.isURL(v),
       message: (props) => `${props.value} Неверный URL!`,
     },
     required: true,
