@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const validator = require('validator');
 
 const cardSchema = new mongoose.Schema({
   name: {
@@ -10,7 +11,7 @@ const cardSchema = new mongoose.Schema({
   link: {
     type: String,
     validate: {
-      validator: (v) => v.match(/^https?:\/\/(www\.)?[\w./-]{1,}/),
+      validator: (v) => validate.isURL(v),
       message: (props) => `${props.value} Неверный URL!`,
     },
     required: true,
@@ -29,5 +30,6 @@ const cardSchema = new mongoose.Schema({
     default: Date.now,
   },
 });
+
 
 module.exports = mongoose.model('card', cardSchema);
